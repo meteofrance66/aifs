@@ -1,6 +1,9 @@
 name: Mise à jour AIFS France
 
 on:
+  schedule:
+    # 1 run par jour (AIFS 00Z), à une heure différente des autres modèles.
+    - cron: "10 12 * * *"
   workflow_dispatch:
   # Pas de planification pour l'instant : lancement à la main (workflow_dispatch).
 
